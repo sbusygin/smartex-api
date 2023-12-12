@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "is_staff": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string"
+    },
+    "groups": {
+      "type": "object"
+    },
+    "ws_token": {
+      "type": "string"
+    },
+    "is_superuser": {
+      "type": "boolean"
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "import": {
+          "type": "boolean"
+        },
+        "flow_assets": {
+          "type": "boolean"
+        },
+        "common_collections": {
+          "type": "boolean"
+        },
+        "common_and_public_collections": {
+          "type": "boolean"
+        },
+        "assets_links_view": {
+          "type": "boolean"
+        },
+        "assets_links_edit": {
+          "type": "boolean"
+        },
+        "can_view_comments": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "import",
+        "flow_assets",
+        "common_collections",
+        "common_and_public_collections",
+        "assets_links_view",
+        "assets_links_edit",
+        "can_view_comments"
+      ]
+    },
+    "organization": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "unverified": {
+      "type": "boolean"
+    },
+    "token": {
+      "type": "string"
+    },
+    "password_expired": {
+      "type": "boolean"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "notifications": {
+          "type": "object",
+          "properties": {
+            "comment": {
+              "type": "object",
+              "properties": {
+                "browser": {
+                  "type": "boolean"
+                },
+                "email": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "browser",
+                "email"
+              ]
+            }
+          },
+          "required": [
+            "comment"
+          ]
+        }
+      },
+      "required": [
+        "notifications"
+      ]
+    },
+    "lang": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "email",
+    "is_staff",
+    "id",
+    "groups",
+    "ws_token",
+    "is_superuser",
+    "permissions",
+    "organization",
+    "unverified",
+    "token",
+    "password_expired",
+    "options",
+    "lang"
+  ]
+}
